@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "build-all": "babel-node api/build --release && babel-node api/buildClient --release",
-    "start": "node api/dist/server/server"  
+    "start": "node api/dist/server/server"
   },
   "keywords": [
     "zoom",
@@ -20,6 +20,7 @@
     "async": "^2.0.0-rc.3",
     "axios": "^0.18.0",
     "babel-brunch": "^7.0.1",
+    "babel-cli": "^6.26.0",
     "body-parser": "^1.14.1",
     "boolean": "^0.1.0",
     "brunch": "^2.10.17",
@@ -45,6 +46,7 @@
     "url-parse": "^1.1.8",
     "webpack-dev-middleware": "^3.7.0",
     "webpack-livereload-plugin": "^2.2.0",
+    "webpack-node-externals": "^1.7.2",
     "winston": "^2.1.1",
     "winston-aws-cloudwatch": "^1.5.0",
     "zoomus-jssdk": "^1.4.2"
@@ -52,6 +54,7 @@
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
+    "@babel/node": "^7.5.0",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-stage-0": "^7.0.0",
