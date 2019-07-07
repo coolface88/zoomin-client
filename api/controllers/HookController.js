@@ -29,19 +29,26 @@ const dispatchWebhookEvents = (req, res) => {
       store.dispatch(startMeeting(req.body.payload.object.id));
       break;
     case MEETING_ENDED:
-      store.dispatch(endMeeting(req.body.id));
+      store.dispatch(endMeeting(req.body.payload.object.id));
+      break;
     case MEETING_CREATED:
-      store.dispatch(createMeeting(req.body.id));
+      store.dispatch(createMeeting(req.body.payload.object.id));
+      break;
     case MEETING_UPDATED:
-      store.dispatch(updateMeeting(req.body.id));
+      store.dispatch(updateMeeting(req.body.payload.object.id));
+      break;
     case MEETING_PARTICIPANT_JOINED:
-      store.dispatch(joinMeeting(req.body.id));
+      store.dispatch(joinMeeting(req.body.payload.object.id));
+      break;
     case MEETING_PARTICIPANT_LEFT:
-      store.dispatch(leaveMeeting(req.body.id));
+      store.dispatch(leaveMeeting(req.body.payload.object.id));
+      break;
     case MEETING_PARTICIPANT_JBH_JOINED:
-      store.dispatch(joinBeforeHost(req.body.id));
+      store.dispatch(joinBeforeHost(req.body.payload.object.id));
+      break;
     case MEETING_PARTICIPANT_JBH_WAITING:
-      store.dispatch(joinBeforeHostWaiting(req.body.id));
+      store.dispatch(joinBeforeHostWaiting(req.body.payload.object.id));
+      break;
     default:
       return res.status(404).send()
   }
