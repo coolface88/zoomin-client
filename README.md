@@ -8,6 +8,24 @@ Express is used to provide HTTP routes for page and webhook controllers. Package
 - lib/models/webhook is the domain of webhook events handling with Redux utilized.
 - .env, ZoomEvents.js, ... are the file configs
 ### code snippet
+- MEETING_STARTED Zoom event json
+```js
+{
+  "event": "meeting.started",
+  "payload": {
+    "account_id": "string",
+    "object": {
+      "id":"meeting2345",
+      "uuid": "string",
+      "host_id": "string",
+      "topic": "string",
+      "type": "integer",
+      "timezone": "string",
+      "duration": "integer"
+    }
+  }
+}
+```
 - fix this to align with actual json payload of Zoom Meeting Events as its references or changing
 ```js
 export const MEETING_CREATED                 = 'meeting.created';
