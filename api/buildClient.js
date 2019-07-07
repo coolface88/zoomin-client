@@ -26,8 +26,8 @@ const webpackConfig = getWebpackConfig({
 });
 
 /**
- * Uses webpack to compile the API server
- * into a single file executable by node
+ * Uses webpack to compile the zoom client
+ * into a single file executable by browser
  */
 async function build() {
   await run(bundle, { webpackConfig, watch });
