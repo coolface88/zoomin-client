@@ -47,4 +47,22 @@ export const meeting_ended_channel   = socket.channel("meeting_ended:", {});
 ```sh
 npm run build-all
 npm run start
+
+> node api/dist/server/server
+
+2019-07-07 17:27:51:812 - info: 
+ --- 
+ ==>  API is running on port 8080 
+ ==>  Send requests to http://127.0.0.1:8080 
+ --- 
+
+2019-07-07 17:30:29:866 - info: The channel joined successfully
+2019-07-07 17:30:59:598 - info: dispatching 
+{ event: 'MEETING_STARTED', text: 'meeting2345' }
+2019-07-07 17:30:59:601 - info: phoenixchannelDispatcher 
+{ event: 'MEETING_STARTED', text: 'meeting2345' }
+2019-07-07 17:31:31:663 - info: dispatching 
+{ event: 'MEETING_STARTED', text: 'meeting2345' }
+2019-07-07 17:31:31:664 - info: phoenixchannelDispatcher 
+{ event: 'MEETING_STARTED', text: 'meeting2345' }
 ```
